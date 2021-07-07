@@ -18,7 +18,24 @@ function formatDate(timestamp) {
     "Saturday",
   ];
   let day = days[date.getDay()];
-  return `${day} ${hours}:${minutes}`;
+
+  let months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "Juni",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+  let month = months[date.getMonth()];
+  let currentDate = date.getDate();
+  return `${day} ${hours}:${minutes}, ${month} ${currentDate}`;
 }
 
 function formatDay(timestamp) {
@@ -113,6 +130,15 @@ function handleSubmit(event) {
   let cityInputElement = document.querySelector("#city-input");
   search(cityInputElement.value);
 }
+function searchLocation(position) {
+  let apiKey = "e32e276f7fbc10da2ad0ce3f431a1ad1";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&units=metric&appid=${apiKey}`;
+  axios.get(apiUrl).then(displayTemperature);
+}
+function getCurrentPosition(event) {
+  event.preventDefault();
+  navigator.geolocation.getCurrentPosition(searchLocation);
+}
 
 function displayFahrenheitTemperature(event) {
   event.preventDefault();
@@ -141,5 +167,8 @@ fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
 
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
+
+let button = document.querySelector("#location");
+button.addEventListener("click", getCurrentPosition);
 
 search("Tokyo");

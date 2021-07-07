@@ -1,5 +1,6 @@
-.body {
+body {
   font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
 }
 
 h1 {
@@ -9,6 +10,7 @@ h1 {
   font-weight: 100;
   line-height: 28px;
   margin-bottom: 0;
+  margin-top: 10px;
 }
 ul {
   margin: 0;
@@ -31,11 +33,14 @@ li:first-letter {
   max-width: 600px;
   margin: 30px auto;
 }
+
 .weather-app {
   padding: 20px;
   border: 1px solid #dadde1;
   border-radius: 10px;
+  background-color: #deddfa;
 }
+
 .overview {
   margin-bottom: 20px;
 }
@@ -71,6 +76,7 @@ li:first-letter {
 }
 .open-source {
   text-decoration: none;
+  color: #ea7ad7;
 }
 
 .weather-forecast {
@@ -88,4 +94,27 @@ li:first-letter {
 }
 .weather-forecast-temperatures {
   font-size: 13px;
+}
+.button {
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 10px;
+  transition: all 150ms ease-in-out;
+
+  padding: 6px 10px;
+}
+.button:hover {
+  background-color: #dab8f3;
+}
+.btn {
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 10px;
+  transition: all 150ms ease-in-out;
+}
+.btn:hover {
+  background-color: #dab8f3;
+}
+.form-control {
+  border-radius: 10px;
 }
