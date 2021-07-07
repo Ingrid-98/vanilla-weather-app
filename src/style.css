@@ -1,6 +1,6 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+  background: #a2a8d3;
 }
 
 h1 {
@@ -76,7 +76,7 @@ li:first-letter {
 }
 .open-source {
   text-decoration: none;
-  color: #ea7ad7;
+  color: #38598b;
 }
 
 .weather-forecast {
@@ -104,7 +104,7 @@ li:first-letter {
   padding: 6px 10px;
 }
 .button:hover {
-  background-color: #dab8f3;
+  background-color: #38598b;
 }
 .btn {
   background-color: transparent;
@@ -113,7 +113,7 @@ li:first-letter {
   transition: all 150ms ease-in-out;
 }
 .btn:hover {
-  background-color: #dab8f3;
+  background-color: #38598b;
 }
 .form-control {
   border-radius: 10px;
