@@ -77,6 +77,10 @@ li:first-letter {
 .open-source {
   text-decoration: none;
   color: #38598b;
+  transition: all 150ms ease-in-out;
+}
+.open-source:hover {
+  color: white;
 }
 
 .weather-forecast {
