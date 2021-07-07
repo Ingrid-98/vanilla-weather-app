@@ -83,6 +83,12 @@ li:first-letter {
   margin-top: 20px;
   text-align: center;
   color: 000;
+  border: 1px solid white;
+  border-radius: 10px;
+  transition: all 150ms ease-in-out;
+}
+.weather-forecast:hover {
+  background: #e7eaf6;
 }
 
 .weather-forecast-date {
