@@ -62,6 +62,13 @@ li:first-letter {
   cursor: default;
   text-decoration: none;
 }
+
+.celsius {
+  text-decoration: none;
+}
+.fahrenheit {
+  text-decoration: none;
+}
 .open-source {
   text-decoration: none;
 }
